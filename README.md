@@ -11,7 +11,6 @@ This repository explains what verified commits are, why they matter, and how to 
 Verified commits are Git commits that are cryptographically signed with a GPG (GNU Privacy Guard) key that you control. GitHub checks the signature and, if it matches a trusted key on your account, displays a "Verified" badge next to the commit.
 
 This helps ensure that:
-
 - The commit really came from you.
 - The commit content has not been tampered with after it was signed.
 
@@ -39,7 +38,7 @@ Using verified commits ensures that only commits signed with your GPG key appear
 <br>
 
 ## How to Enable Verified Commits
-The steps below walk you through installing GPG, generating a key, connecting it to GitHub, and configuring Git to sign your commits.
+The steps below walk you through installing GPG, generating a key, connecting it to GitHub, and configuring Git to sign your commits. Run all commands in this guide in your terminal (for example, Terminal on macOS or Linux, or PowerShell on Windows).
 
 ### 1. Install GPG
 
@@ -108,7 +107,7 @@ In this example, the key ID is `ABC123456789DEF0` (the part after `sec`).
 Export your public key in ASCII‑armored format:
 
 ```bash
-gpg --armor --export ABC123456789DEF0
+gpg --armor --export <KEY_ID>
 ```
 
 Copy the entire output.
@@ -118,7 +117,8 @@ Then, in GitHub:
 1. Go to **Settings**.
 2. Navigate to **SSH and GPG keys**.
 3. Click **New GPG key**.
-4. Paste the exported key, then save.
+4. Give the key a clear name, for example "Verified Commits".
+5. Paste the exported key, then save.
 
 GitHub will now trust commits that are signed with this key.
 
@@ -127,7 +127,7 @@ GitHub will now trust commits that are signed with this key.
 Tell Git which GPG key to use for signing:
 
 ```bash
-git config --global user.signingkey ABC123456789DEF0
+git config --global user.signingkey <KEY_ID>
 ```
 
 To sign all commits by default:
