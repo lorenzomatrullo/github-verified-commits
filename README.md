@@ -3,6 +3,8 @@ Have you ever wanted your GitHub commits to carry the "Verified" badge? Verified
 
 This repository explains what verified commits are, why they matter, and how to set them up using GPG.
 
+![GitHub verified commits](https://vps.lorenzomatrullo.dev/view/github-profile/github-verified-commit.png)
+
 <br>
 
 ## What Are Verified Commits?
