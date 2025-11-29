@@ -20,6 +20,7 @@ This helps ensure that:
 - **Security**: Makes it much harder for someone to impersonate you in a repository.
 - **Professionalism**: Shows that you care about the integrity and security of your open‑source work.
 
+<br>
 
 ## The Problem With Unverified Commits
 Without verification, Git only relies on the `user.name` and `user.email` in your local Git configuration. Anyone can set these to your details and produce commits that appear to be from you:
